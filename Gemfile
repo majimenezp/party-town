@@ -29,6 +29,11 @@ gem 'haml-rails'
 
 gem 'devise'
 
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
