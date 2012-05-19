@@ -6,4 +6,16 @@ class EventsTest < ActionDispatch::IntegrationTest
 
     assert_response :success
   end
+
+  test "creation of an event" do
+    visit new_event_path
+
+    fill_in "Title", with: "SHDH Cd del Carmen"
+    fill_in "Hashtag", with: "shdhcme"
+    fill_in "Address line 1", with: "Calle 31 Num. 54"
+    fill_in "Address line 2", with: "Colonia Centro"
+    fill_in "City", with: "Ciudad del Carmen"
+
+    click_button "Save"
+  end
 end
