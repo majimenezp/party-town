@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @event.title
+%p
+  %b Address line 1:
+  = @event.address_line_1
+%p
+  %b Address line 2:
+  = @event.address_line_2
+%p
+  %b City:
+  = @event.city
+%p
+  %b Latitude:
+  = @event.latitude
+%p
+  %b Longitude:
+  = @event.longitude
+%p
+  %b When:
+  = @event.when
+
+= link_to 'Edit', edit_event_path(@event)
+\|
+= link_to 'Back', events_path
