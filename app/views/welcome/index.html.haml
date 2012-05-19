@@ -36,7 +36,7 @@
 						map:map,
 						title:item.title,
 						link:"",
-						html:"<p>"+ item.title+"</p><a href='" + ""+"'>Ver evento</a>"
+						html:"<p>"+ item.title+"</p><a href='/events/" + item.id+"'>Ver evento</a>"
 					});
 					google.maps.event.addListener(marker, 'click', function() {
 						infowindow.setContent(this.html);
