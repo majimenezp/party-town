@@ -3,3 +3,7 @@
 
 en:
   hello: "Hello world"
+
+  welcome:
+    index:
+      new_event: "Register your event"

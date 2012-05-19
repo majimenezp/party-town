@@ -1,4 +1,7 @@
 PartyTown::Application.routes.draw do
+  root to: "welcome#index"
+
+  resources :events
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
