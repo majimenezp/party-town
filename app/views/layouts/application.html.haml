@@ -30,14 +30,16 @@
               %li= link_to "Link 3", "/path3"
 
     .container
-
       .content
-        .hero-unit
-
+        .row
+          .span4
+            %p logo
+          .span6
         .row
           .span9
             = yield
           .span3
+            %a.btn.btn-large crear evento
             .well.sidebar-nav
               %h3 Sidebar
               %ul.nav.nav-list
