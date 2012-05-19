@@ -30,12 +30,16 @@
               %li= link_to "Link 3", "/path3"
 
     .container
-
       .content
+        .row
+          .span4
+            %p logo
+          .span6
         .row
           .span9
             = yield
           .span3
+            %a.btn.btn-large crear evento
             .well.sidebar-nav
               %h3 Sidebar
               %ul.nav.nav-list
@@ -43,6 +47,18 @@
                 %li= link_to "Link 1", "/path1"
                 %li= link_to "Link 2", "/path2"
                 %li= link_to "Link 3", "/path3"
+
+        .row
+          .span4
+            %h1 Subtitle
+            %p Text text text
+          .span4
+            %h1 Subtitle
+            %p Text text text
+          .span4
+            %h1 Subtitle
+            %p Text text text
+        <!--/row-->
     
       %footer
         %p &copy; Company 2012
