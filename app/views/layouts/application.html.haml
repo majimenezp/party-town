@@ -32,6 +32,8 @@
     .container
 
       .content
+        .hero-unit
+
         .row
           .span9
             = yield
@@ -43,6 +45,18 @@
                 %li= link_to "Link 1", "/path1"
                 %li= link_to "Link 2", "/path2"
                 %li= link_to "Link 3", "/path3"
+
+        .row
+          .span4
+            %h1 Subtitle
+            %p Text text text
+          .span4
+            %h1 Subtitle
+            %p Text text text
+          .span4
+            %h1 Subtitle
+            %p Text text text
+        <!--/row-->
     
       %footer
         %p &copy; Company 2012

@@ -65,6 +65,8 @@ GEM
     less-rails (2.2.2)
       actionpack (>= 3.1)
       less (~> 2.2.0)
+    less-rails-bootstrap (2.0.12)
+      less-rails (~> 2.2.0)
     libv8 (3.3.10.4)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -138,6 +140,7 @@ DEPENDENCIES
   haml
   haml-rails
   jquery-rails
+  less-rails-bootstrap
   pg
   rails (= 3.2.3)
   sass-rails (~> 3.2.3)
