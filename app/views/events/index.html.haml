@@ -1,12 +1,10 @@
 %h1 Listing events
-%table
+%table.table.table-striped
   %tr
     %th Title
     %th Address line 1
     %th Address line 2
     %th City
-    %th Latitude
-    %th Longitude
     %th When
     %th
     %th
@@ -18,9 +16,7 @@
       %td= event.address_line_1
       %td= event.address_line_2
       %td= event.city
-      %td= event.latitude
-      %td= event.longitude
-      %td= event.when
+      %td= time_ago_in_words event.when unless event.when.nil?
       %td= link_to 'Show', event
       %td= link_to 'Edit', edit_event_path(event)
       %td= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete
