@@ -22,7 +22,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand(href="#") PartyTown
+          = link_to "PartyTown", root_path, class: 'brand'
           .container.nav-collapse
             %ul.nav
               %li= link_to "Link 1", "/path1"
@@ -31,10 +31,6 @@
 
     .container
       .content
-        .row
-          .span4
-            %p logo
-          .span6
         .row
           .span12
             = yield
