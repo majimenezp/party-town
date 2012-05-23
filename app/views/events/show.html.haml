@@ -1,22 +1,18 @@
 %p#notice= notice
 
-%p
-  %b Title:
+%h2
   = @event.title
-%p
-  %b Address line 1:
-  = @event.address_line_1
-%p
-  %b Address line 2:
-  = @event.address_line_2
-%p
-  %b City:
-  = @event.city
+%b Where:
+= @event.address_line_1 
+= @event.address_line_2
+= @event.city
+%br
+%b When:
+= @event.when
+
 %input{:type=>"hidden",:id=>"event_latitude",:name=>"event[latitude]",:value=>@event.latitude}
 %input{:type=>"hidden",:id=>"event_longitude",:name=>"event[longitude]",:value=>@event.longitude}
 %p
-  %b When:
-  = @event.when
 
 = link_to 'Edit', edit_event_path(@event)
 \|
