@@ -27,6 +27,7 @@ gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 gem 'haml'
 gem 'haml-rails'
+gem 'simple_form'
 
 gem 'devise'
 

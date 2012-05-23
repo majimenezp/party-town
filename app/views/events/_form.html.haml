@@ -1,35 +1,23 @@
 .row
-  .span4
-    = form_for @event do |f|
+  .span6
+    = simple_form_for @event, html:{class:'form-horizontal'} do |f|
       -if @event.errors.any?
         #error_explanation
           %h2= "#{pluralize(@event.errors.count, "error")} prohibited this event from being saved:"
           %ul
             - @event.errors.full_messages.each do |msg|
               %li= msg
-      .field
-        = f.label :title
-        = f.text_field :title
-      .field
-        = f.label :address_line_1
-        = f.text_field :address_line_1
-      .field
-        = f.label :address_line_2
-        = f.text_field :address_line_2
-      .field
-        = f.label :city
-        = f.text_field :city
-      .field
-        = f.hidden_field :latitude
-        = f.hidden_field :longitude
-        = f.label :when
-        = f.datetime_select :when
-      .field
-        = f.label :hashtag
-        = f.text_field :hashtag
-      .actions
-        = f.submit 'Save'
-  .span4  
+      = f.input :title
+      = f.input :address_line_1
+      = f.input :address_line_2
+      = f.input :city
+      = f.input :when
+      = f.input :hashtag
+      = f.hidden_field :latitude
+      = f.hidden_field :longitude
+      .form-actions
+        = f.submit 'Save', class:'btn btn-primary'
+  .span6
     #mapa{:style => "margin:0px;padding:0px;height:500px;width:100%;"}
 - content_for :additional_css do
   :css
@@ -56,7 +44,7 @@
       var mapCenter=new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
       setCoords(position.coords.latitude,position.coords.longitude);
       var mapOptions={
-        zoom:18,
+        zoom:15,
         center:mapCenter,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
